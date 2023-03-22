@@ -51,6 +51,20 @@
     border: 2px solid black;
     border-radius: 8px;
   }
+  .degree-selection {
+    margin-top: 20px;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  input[type='text'] {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
   
   @media (min-width: 768px) {
     .HomePage-header {

@@ -1,0 +1,10 @@
+/* src/Title.css */
+.title-container {
+    padding: 2rem 1rem;
+  }
+  
+  .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+  
