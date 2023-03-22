@@ -34,9 +34,10 @@ The project uses MongoDB as a document database to store user information and ch
 ## Usage
 
 1. Create an account.
-2. Log in.
-3. Start chatting!
-4. Save and Retrive Chats
+2. Select Degree program (BS CS only one planed atm)
+3. Log in.
+4. Start chatting!
+5. Save and Retrive Chats
 
 
 
