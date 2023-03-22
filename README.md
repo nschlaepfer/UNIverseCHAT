@@ -1,3 +1,55 @@
+# Chat App
+
+# Project Name: UNIverseChat
+
+The goal of this project is to have students login to our website to chat with a LLM chat bot that has been trained on the entire selected degrees materials and text books as well as assignments. The student will be able to save and retrieve chats form a database. This way, they can review their learning progress and get feedback from the chatbot.
+
+This is a full-stack MERN project that includes a chatbot, user accounts, and authentication. The project is designed to allow users to create accounts, log in, and start chatting. The chatbot is powered by a custom LLM model deployed on the backend. The project is built using MongoDB, Express, React, Node.js, LangChain, Flask, and Docker.
+
+The project uses MongoDB as a document database to store user information and chat history. Express and Node.js provide a web framework for handling requests and responses on the server side. React creates dynamic user interfaces on the client side using components and state management. LangChain provides an API for accessing the LLM model that generates chatbot responses based on natural language input. Flask serves as a bridge between LangChain and Express by sending and receiving data in JSON format. Docker containers simplify the deployment and management of the application.
+
+## Requirements
+
+- User accounts to save chats.
+- User should have a username and a password.
+- The website will use a custom LLM model deployed on the backend.
+
+## Technologies
+
+- MongoDB
+- Express
+- React
+- Node.js
+- LangChain
+- Flask
+- Docker
+- LLAMA LLM 
+
+## Installation
+
+1. Clone the repository.
+2. Install the dependencies.
+3. Start the server.
+
+## Usage
+
+1. Create an account.
+2. Log in.
+3. Start chatting!
+4. Save and Retrive Chats
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
