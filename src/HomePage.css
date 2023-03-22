@@ -121,3 +121,15 @@ button[type='submit']:hover {
 .degree-selection {
     margin-top: 20px;
 }
+
+.HomePage-footer a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    transition: border-bottom 0.2s ease-in-out;
+}
+
+.HomePage-footer a:hover {
+    border-bottom: 1px solid transparent;
+}
+

@@ -52,13 +52,13 @@ function HomePage() {
                         <button onClick={handleProfileClick}>Profile</button>
                     </div>
                     <div className="section-container">
-                    <div className="welcome-section">
-                        <p>Welcome, username!</p>
-                        <p>Current Degree: Computer Science</p>
+                        <div className="welcome-section">
+                            <p>Welcome, username!</p>
+                            <p>Current Degree: Computer Science</p>
+                        </div>
                     </div>
                 </div>
-                </div>
-            
+
                 <div className="prompt-section">
                     <h2>Prompts</h2>
                     {/* Add your prompts components here */}
@@ -88,7 +88,7 @@ function HomePage() {
                     <div className="degree-selection">
                         <label htmlFor="degree"></label>
                         <select id="degree" value={selectedDegree} onChange={handleDegreeChange}>
-                            <option value="">--Please choose an option--</option>
+                            <option value="">--Please choose a degree--</option>
                             <option value="Computer Science">Computer Science</option>
                             <option value="Electrical Engineering">Electrical Engineering</option>
                             <option value="Mechanical Engineering">Mechanical Engineering</option>
@@ -97,6 +97,10 @@ function HomePage() {
                     </div>
                 </div>
             </header>
+            <footer className="HomePage-footer">
+                Made by <a href="https://github.com/nschlaepfer"> Nicolas Schlaepfer </a>
+            </footer>
+
         </div>
     );
 }

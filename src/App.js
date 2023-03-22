@@ -1,33 +1,28 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Title from './Title';
-
-
 import './App.css';
 
 function App() {
   const navigate = useNavigate();
 
-  const handleNextButtonClick = () => {
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
     navigate('/home');
   };
 
   return (
     <div className="App">
-      <Title /> { /* Component for title */}
-      <header className="App-header">
-        <h1>Login</h1>
-        <div>
-          <input type="text" placeholder="Username" />
-          <input type="password" placeholder="Password" />
-          <button onClick={handleNextButtonClick}>Next</button>
-        </div>
-      </header>
+      <Title />
+      <h1>Login</h1>
+      <form className="login-form" onSubmit={handleFormSubmit}>
+        <input type="text" placeholder="Username" className="login-input" />
+        <input type="password" placeholder="Password" className="login-input" />
+        <button type="submit" className="login-button">Next</button>
+      </form>
     </div>
   );
 }
 
-
-
 export default App;
+
