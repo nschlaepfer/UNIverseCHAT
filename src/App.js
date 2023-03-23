@@ -26,19 +26,32 @@ function App() {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
-    // Add your login logic here, e.g., make an API call to your backend to authenticate the user.
-    // If the login is successful, navigate to the home page.
-    const isAuthenticated = await login(username, password);
-    if (isAuthenticated) {
-      navigate('/home');
-    } else {
-      alert('Invalid credentials');
+  
+    try {
+      const response = await fetch('http://localhost:3001/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        console.log('User authenticated successfully:', data);
+        // Save the received token and redirect to the dashboard or another page as needed
+        navigate('/home'); // Navigate to the home page
+      } else {
+        console.error('Authentication error:', data);
+        alert('Invalid credentials');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Error during authentication');
     }
-    // const enteredUsername = event.target.username.value;
-    // setUsername(enteredUsername);
-    // navigate('/home'); // Navigate to the home page
   };
+  
 
   return (
     <div className="App">
@@ -73,10 +86,10 @@ function App() {
   );
 }
 
-async function login(username, password) {
-  // Replace this with your actual login logic (API call)
-  return username === 'Poop' && password === 'test';
-}
+// async function login(username, password) {
+//   // Replace this with your actual login logic (API call)
+//   return username === 'Poop' && password === 'test';
+// }
 
 export default App;
 

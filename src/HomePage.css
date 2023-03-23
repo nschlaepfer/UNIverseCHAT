@@ -110,7 +110,14 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.form {
+.chat-section-form {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    flex-wrap:  nowrap;
+}
+
+.chat-section-button {
     display: flex;
     align-items: stretch;
     flex-direction: row;

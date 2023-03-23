@@ -27,7 +27,7 @@ function AccountCreation() {
 
     // Send a POST request to your backend to create a new user
     try {
-      const response = await fetch('http://localhost:5000/api/users/register', {
+      const response = await fetch('http://localhost:3001/register', { //register is the route in the backend
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ function AccountCreation() {
 
       <form className="account-creation-form" onSubmit={handleSubmit}>
         <h2 className="account-creation-title">Create an Account</h2>
-        <div className="account-creation-froms">
+        <div className="account-creation-from">
           <label className="account-creation-label" htmlFor="username">
             Username:
           </label>

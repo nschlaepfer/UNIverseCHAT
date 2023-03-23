@@ -49,7 +49,7 @@ function HomePage(props) {
             <Title />
             <header className="HomePage-header">
                 <div className="profile-container">
-                <div className="welcome-section">
+                    <div className="welcome-section">
                         <div className="container-user">
                             <p class="left-text">Current Degree: {selectedDegree}</p>
                             <p class="right-text">Welcome, {username}!</p>
@@ -60,7 +60,7 @@ function HomePage(props) {
                             Profile
                         </button>
                     </div>
-                    
+
                 </div>
                 <div className="prompt-section">
                     <h2>Prompts</h2>
@@ -70,7 +70,7 @@ function HomePage(props) {
                         </div>
                     ))}
                 </div>
-                
+
                 <div className="chat-section">
                     <h2>Chat Area</h2>
                     <ul>
@@ -78,28 +78,36 @@ function HomePage(props) {
                             <li key={index}>{msg}</li>
                         ))}
                     </ul>
-                    <form onSubmit={handleSubmit}>
-                        <input
-                            type="text"
-                            placeholder="Type your message..."
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
-                            className="login-input fade-in"
-                        />
-                        <button type="submit" className="chat-send-button">
-                            Send
-                        </button>
-                    </form>
-                    <div className="degree-selection">
-                        <label htmlFor="degree"></label>
-                        <select id="degree" value={selectedDegree} onChange={handleDegreeChange} className="degree-select">
-                            <option value="">--Please choose a degree--</option>
-                            <option value="Computer Science">Computer Science</option>
-                            <option value="Electrical Engineering">Electrical Engineering</option>
-                            <option value="Mechanical Engineering">Mechanical Engineering</option>
-                            <option value="Chemical Engineering">Chemical Engineering</option>
-                        </select>
+                    <div className="chat-section-form">
+                        <form onSubmit={handleSubmit}>
+                            <input
+                                type="text"
+                                placeholder="Type your message..."
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                                className="login-input fade-in"
+                            />
+                            <div className="chat-section-button">
+                                <button type="submit" className="chat-send-button">
+                                    Send
+                                </button>
+                            </div>
+
+
+                        </form>
+
+                        <div className="degree-selection">
+                            <label htmlFor="degree"></label>
+                            <select id="degree" value={selectedDegree} onChange={handleDegreeChange} className="degree-select">
+                                <option value="">--Please choose a degree--</option>
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="Electrical Engineering">Electrical Engineering</option>
+                                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                                <option value="Chemical Engineering">Chemical Engineering</option>
+                            </select>
+                        </div>
                     </div>
+
                 </div>
             </header>
             <footer className="HomePage-footer">
