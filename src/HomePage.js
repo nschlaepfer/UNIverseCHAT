@@ -1,13 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './HomePage.css';
 import { useNavigate } from 'react-router-dom';
 import Title from './Title';
 import './App.css';
+import axios from 'axios';
+import Chat from './Chat';
+
 
 function HomePage(props) {
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
     const [selectedDegree, setSelectedDegree] = useState('');
+    const [chatHistory, setChatHistory] = useState([]);
+
+    const fetchChatHistory = async () => {
+        try {
+            const config = {
+                headers: {
+                    'x-auth-token': localStorage.getItem('token'),
+                },
+            };
+
+            const res = await axios.get('/chatMessages', config);
+            setChatHistory(res.data);
+        } catch (err) {
+            console.error(err.message);
+        }
+    };
+    const fetchChatMessages = async () => {
+        try {
+            const config = {
+                headers: {
+                    'x-auth-token': localStorage.getItem('token'),
+                },
+            };
+
+            const res = await axios.get('/api/chatMessages', config);
+            setMessages(res.data);
+        } catch (err) {
+            console.error(err.message);
+        }
+    };
+    useEffect(() => {
+        fetchChatHistory();
+    }, []);
+
+    useEffect(() => {
+        fetchChatMessages();
+      }, []);
+
 
     const navigate = useNavigate();
 
@@ -26,6 +67,9 @@ function HomePage(props) {
     const handleDegreeChange = (e) => {
         setSelectedDegree(e.target.value);
     };
+
+
+
 
 
     const { username, degree } = props;
@@ -74,7 +118,7 @@ function HomePage(props) {
                 <div className="chat-section">
                     <h2>Chat Area</h2>
                     <ul>
-                        {messages.map((msg, index) => (
+                        {chatHistory.map((msg, index) => (
                             <li key={index}>{msg}</li>
                         ))}
                     </ul>

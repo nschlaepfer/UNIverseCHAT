@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import './AccountCreation.css';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
+
+
+
+
 
 // function TextArt() {
 //   return (
@@ -8,12 +13,21 @@ import './App.css';
 
 //   );
 // }
+
+
+
 function AccountCreation() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: '',
     password: '',
     degree: '',
   });
+
+  const [successMessage, setSuccessMessage] = useState(false);
+  const [isSuccessful, setIsSuccessful] = useState(false);
+  const [formStyle, setFormStyle] = useState({});
+
 
 
 
@@ -22,33 +36,49 @@ function AccountCreation() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleRegistrationSubmit = async (event) => {
 
-    // Send a POST request to your backend to create a new user
+    event.preventDefault();
+
     try {
-      const response = await fetch('http://localhost:3001/register', { //register is the route in the backend
+      const response = await fetch('http://localhost:3001/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ username: formData.username, password: formData.password, degree: formData.degree }),
       });
 
-      const data = await response.json();
-
       if (response.ok) {
+        const data = await response.json();
         console.log('User registered successfully:', data);
-        // Redirect to the login page or another page as needed
+        setSuccessMessage(true);
+        setIsSuccessful(true);
+        setFormStyle({ boxShadow: '0 4px 6px rgba(0, 255, 0, 0.2)' });
+        //Alert user that they have successfully registered
+        setTimeout(() => {
+          // Redirect the user to the login page or another page as needed
+          navigate('/home');
+        }, 3000); // 3 seconds
       } else {
-        console.error('Registration error:', data);
+        console.error('Registration error:');
+        alert('Registration failed');
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error during registration:', error);
     }
+
+
+
+    //not sure if this right
+
+
+
   };
 
+
   return (
+
     <div className="account-creation-container">
 
 
@@ -56,9 +86,9 @@ function AccountCreation() {
         fontFamily: "'Futuristic Font', sans-serif",
         fontSize: "72px",
         textAlign: "center"
-        
-        
-        
+
+
+
       }}>
         <span style={{ color: "#4d4d4d" }}>UNI</span>
         <span style={{ color: "#007bff" }}>verse</span>
@@ -68,7 +98,7 @@ function AccountCreation() {
 
 
 
-      <form className="account-creation-form" onSubmit={handleSubmit}>
+      <form className="account-creation-form" onSubmit={handleRegistrationSubmit}>
         <h2 className="account-creation-title">Create an Account</h2>
         <div className="account-creation-from">
           <label className="account-creation-label" htmlFor="username">
@@ -117,9 +147,19 @@ function AccountCreation() {
             <option value="Chemical Engineering">Chemical Engineering</option>
           </select>
         </div>
+
+        <p className={`success-message ${successMessage ? 'visible' : ''}`}>
+          Registration successful!
+        </p>
+
+     
         <button className="account-creation-button btn btn-primary" type="submit">
           Create Account
         </button>
+       
+
+
+
       </form>
     </div>
   );

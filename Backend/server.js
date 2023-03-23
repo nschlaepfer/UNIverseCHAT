@@ -2,10 +2,16 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
+const chatMessagesRouter = require('./routes/chatMessages');
+const config = require('config');
+const jwtSecret = config.get('jwtSecret');
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+
+
 
 // Temporarily hardcoded user with hashed password
 const users = [
@@ -98,10 +104,12 @@ app.post('/register', async (req, res) => {
         const user = { username: req.body.username, password: hashedPassword };
         users.push(user);
         res.status(201).send({ message: 'User registered' });
-    } catch {
+    } catch (error) {
+        console.error(error);
         res.status(500).send({ message: 'Failed to register user' });
     }
 });
+
 
 
 //login route temp
@@ -120,6 +128,15 @@ app.post('/login', async (req, res) => {
 });
 
 
+app.get('/api/chatMessages', async (req, res) => {
+  try {
+    const chatMessages = await ChatMessage.find({});
+    res.json(chatMessages);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
 
 
 
