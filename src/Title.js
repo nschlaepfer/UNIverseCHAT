@@ -5,7 +5,7 @@ import './Title.css';
 function Title() {
   return (
     <div className="title-container">
-      <h1 className="title">UNIverse Chat</h1>
+      <h1 className="title floating">UNI verse Chat</h1>
     </div>
   );
 }

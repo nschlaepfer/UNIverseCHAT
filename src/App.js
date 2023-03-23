@@ -14,6 +14,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className="background-stars"></div>
       <StarBackground />
       <Title />
       <h1>Login</h1>
