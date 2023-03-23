@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './HomePage.css';
 import { useNavigate } from 'react-router-dom';
 import Title from './Title';
+import './App.css';
 
 function HomePage(props) {
     const [message, setMessage] = useState('');
@@ -48,17 +49,18 @@ function HomePage(props) {
             <Title />
             <header className="HomePage-header">
                 <div className="profile-container">
-                    <div className="profile-section">
-                        <button className="profile-button" onClick={handleProfileClick}>
-                            Profile
-                        </button>
-                    </div>
-                    <div className="welcome-section">
+                <div className="welcome-section">
                         <div className="container-user">
                             <p class="left-text">Current Degree: {selectedDegree}</p>
                             <p class="right-text">Welcome, {username}!</p>
                         </div>
                     </div>
+                    <div className="profile-section">
+                        <button className="profile-button" onClick={handleProfileClick}>
+                            Profile
+                        </button>
+                    </div>
+                    
                 </div>
                 <div className="prompt-section">
                     <h2>Prompts</h2>
@@ -68,6 +70,7 @@ function HomePage(props) {
                         </div>
                     ))}
                 </div>
+                
                 <div className="chat-section">
                     <h2>Chat Area</h2>
                     <ul>
@@ -81,7 +84,7 @@ function HomePage(props) {
                             placeholder="Type your message..."
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
-                            className="chat-input"
+                            className="login-input fade-in"
                         />
                         <button type="submit" className="chat-send-button">
                             Send

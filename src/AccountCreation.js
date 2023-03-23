@@ -70,13 +70,13 @@ function AccountCreation() {
 
       <form className="account-creation-form" onSubmit={handleSubmit}>
         <h2 className="account-creation-title">Create an Account</h2>
-        <div className="form-group">
+        <div className="account-creation-froms">
           <label className="account-creation-label" htmlFor="username">
             Username:
           </label>
           <input
             className="login-input form-fade-in"
-            type="text"
+            type="username"
             id="username"
             name="username"
             value={formData.username}
@@ -84,7 +84,7 @@ function AccountCreation() {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="form2-group">
           <label className="account-creation-label" htmlFor="password">
             Password:
           </label>
@@ -98,7 +98,7 @@ function AccountCreation() {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="form2-group">
           <label className="account-creation-label" htmlFor="degree">
             Degree:
           </label>
