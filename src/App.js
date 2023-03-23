@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Title from './Title';
 import StarBackground from './StarBackground';
 import './App.css';
 import HomePage from './HomePage';
 import SpaceBackground from './SpaceBackground';
+import Register from './Register';
 
 function App() {
   const navigate = useNavigate();
@@ -15,13 +16,17 @@ function App() {
     setUsername(event.target.value);
   };
 
+  const handleRegisterClick = () => {
+    navigate('/account-creation');
+  };
+
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    
+
     // Add your login logic here, e.g., make an API call to your backend to authenticate the user.
     // If the login is successful, navigate to the home page.
     const isAuthenticated = await login(username, password);
@@ -30,6 +35,9 @@ function App() {
     } else {
       alert('Invalid credentials');
     }
+    // const enteredUsername = event.target.username.value;
+    // setUsername(enteredUsername);
+    // navigate('/home'); // Navigate to the home page
   };
 
   return (
@@ -55,6 +63,11 @@ function App() {
         <button type="submit" className="login-button scale-up">
           Next
         </button>
+       
+         
+        <p>Don't have an account? <span onClick={handleRegisterClick}>Register</span>
+        </p>
+    
       </form>
     </div>
   );
@@ -62,7 +75,7 @@ function App() {
 
 async function login(username, password) {
   // Replace this with your actual login logic (API call)
-  return username === 'test' && password === 'test';
+  return username === 'Poop' && password === 'test';
 }
 
 export default App;

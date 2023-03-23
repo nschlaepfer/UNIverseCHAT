@@ -55,7 +55,7 @@ function HomePage(props) {
                     </div>
                     <div className="welcome-section">
                         <div className="container-user">
-                            <p class="left-text">Current Degree: {degree}</p>
+                            <p class="left-text">Current Degree: {selectedDegree}</p>
                             <p class="right-text">Welcome, {username}!</p>
                         </div>
                     </div>
