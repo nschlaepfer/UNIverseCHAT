@@ -31,7 +31,7 @@ function App() {
       const response = await fetch('http://localhost:3001/login', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json', //this is what goes in the header for postman key and value.
         },
         body: JSON.stringify({ username, password }),
       });
@@ -41,6 +41,8 @@ function App() {
       if (response.ok) {
         console.log('User authenticated successfully:', data);
         // Save the received token and redirect to the dashboard or another page as needed
+        localStorage.setItem('token', data.token);
+
         navigate('/home'); // Navigate to the home page
       } else {
         console.error('Authentication error:', data);
