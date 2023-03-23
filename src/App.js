@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Title from './Title';
+import StarBackground from './StarBackground';
 import './App.css';
 
 function App() {
@@ -13,16 +14,20 @@ function App() {
 
   return (
     <div className="App">
+      <StarBackground />
       <Title />
       <h1>Login</h1>
-      <form className="login-form" onSubmit={handleFormSubmit}>
-        <input type="text" placeholder="Username" className="login-input" />
+      <form className="login-form fade-in" onSubmit={handleFormSubmit}>
+        <input type="username" placeholder="Username" className="login-input" />
         <input type="password" placeholder="Password" className="login-input" />
-        <button type="submit" className="login-button">Next</button>
+        <button type="submit" className="login-button scale-up">Next</button>
       </form>
     </div>
   );
 }
 
 export default App;
+
+
+
 

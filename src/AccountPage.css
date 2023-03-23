@@ -17,6 +17,8 @@
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
   }
   
   .account-form-row {
@@ -24,17 +26,20 @@
     flex-direction: row;
     align-items: center;
     margin-bottom: 1rem;
+    width: 100%;
   }
   
   .account-form-row label {
     margin-right: 1rem;
     font-weight: bold;
+    flex: 0 0 30%;
   }
   
   .account-form-row input {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    flex: 1 1 auto;
   }
   
   .account-form-row button {
@@ -56,4 +61,5 @@
       width: 50%;
     }
   }
+  
   

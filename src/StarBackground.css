@@ -1,0 +1,21 @@
+.background-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: url("./blackdot.png") repeat;
+    background-size: 50px 50px;
+    animation: stars 15s linear infinite;
+  }
+  
+  @keyframes stars {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-2000px);
+    }
+  }
+  
