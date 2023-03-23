@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Title from './Title';
 import './AccountPage.css';
+import './HomePage.css';
 
 function AccountPage({ onLogout }) {
   const [username, setUsername] = useState('');
@@ -31,15 +32,9 @@ function AccountPage({ onLogout }) {
     <div className="AccountPage">
       <Title />
       <h1>Account Settings</h1>
-      <form className="account-form">
-        <div className="account-form-row">
-          <label htmlFor="username">Username:</label>
-          <input type="text" id="username" value={username} onChange={handleUsernameChange} />
-        </div>
-        <div className="account-form-row">
-          <label htmlFor="password">Password:</label>
-          <input type="password" id="password" value={password} onChange={handlePasswordChange} />
-        </div>
+      <form className="login-form fade-in">
+        <input type="username" placeholder="Username" className="login-input" value={username} onChange={handleUsernameChange}/>
+        <input type="password" placeholder="Password" className="login-input" value={password} onChange={handleUsernameChange}/>
         <div className="account-form-row">
           <button type="button" onClick={handleSave}>Save Changes</button>
           <button type="button" onClick={handleLogout}>Logout</button>

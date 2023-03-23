@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import Title from './Title';
 import StarBackground from './StarBackground';
 import './App.css';
+import HomePage from './HomePage';
+import SpaceBackground from './SpaceBackground';
 
 function App() {
   const navigate = useNavigate();
@@ -14,8 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="background-stars"></div>
-      <StarBackground />
+      <SpaceBackground />
       <Title />
       <h1>Login</h1>
       <form className="login-form fade-in" onSubmit={handleFormSubmit}>

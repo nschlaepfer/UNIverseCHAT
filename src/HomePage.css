@@ -59,7 +59,25 @@ body {
     flex-direction: column;
     align-items: flex-start;
     margin-left: 1rem;
-}
+    font-weight: bold; /* Make the text bold */
+    font-size: 1rem; /* Increase the font size */
+    
+  }
+
+  .container-user {
+    overflow: hidden;
+  }
+  
+  .left-text {
+    float: left;
+    margin-left: 10px;
+  }
+  
+  .right-text {
+    float: right;
+    margin-right: 10px;
+  }
+  
 
 .prompt-section,
 .chat-section {
