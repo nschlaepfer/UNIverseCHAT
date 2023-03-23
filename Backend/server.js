@@ -97,18 +97,28 @@ const authenticate = (req, res, next) => {
 
 // ... (rest of the code)
 
-//local test
 app.post('/register', async (req, res) => {
     try {
-        const hashedPassword = await bcrypt.hash(req.body.password, 10);
-        const user = { username: req.body.username, password: hashedPassword };
-        users.push(user);
-        res.status(201).send({ message: 'User registered' });
+      const { username, password } = req.body;
+  
+      // Check if the user already exists
+      const userExists = users.find((u) => u.username === username);
+      if (userExists) {
+        return res.status(400).send({ message: 'Account already exists' });
+      }
+  
+      // Continue with the registration process if the user doesn't exist
+      const hashedPassword = await bcrypt.hash(password, 10);
+      const newUser = { username, password: hashedPassword };
+      users.push(newUser);
+      res.status(201).send({ message: 'User registered' });
+  
     } catch (error) {
-        console.error(error);
-        res.status(500).send({ message: 'Failed to register user' });
+      console.error(error);
+      res.status(500).send({ message: 'Failed to register user' });
     }
-});
+  });
+  
 
 
 
@@ -135,6 +145,7 @@ app.get('/api/chatMessages', async (req, res) => {
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
+    console.log('test');
   }
 });
 
