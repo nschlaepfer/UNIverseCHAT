@@ -22,11 +22,29 @@ function AccountPage({ onLogout }) {
     navigate('/');
   };
 
-  const handleSave = () => {
-    // Save the new username and password here
-    console.log('New username:', username);
-    console.log('New password:', password);
+  const handleSave = async () => {
+    try {
+      const response = await fetch('/api/updateUser', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username,
+          password
+        })
+      });
+  
+      if (!response.ok) {
+        throw new Error('Failed to update account settings');
+      }
+  
+      navigate('/');
+    } catch (error) {
+      console.error(error);
+    }
   };
+  
 
   return (
     <div className="AccountPage">

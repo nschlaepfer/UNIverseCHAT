@@ -1,4 +1,5 @@
 {
-    "jwtSecret": "poop-poop-poop"
-  }
+    "jwtSecret": "poop-poop-poop",
+    "mongoURI": "mongodb+srv://test:test@cluster0.xmifvlk.mongodb.net/test"
+}
   
