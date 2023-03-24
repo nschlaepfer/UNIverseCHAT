@@ -80,23 +80,23 @@ This markdown file is designed to track the progress of the UNIverseChat project
 
 ### Backend
 
-- [ ] Set up Express and Node.js
-- [ ] Implement user account management (registration, login, authentication)
+- [x] Set up Express and Node.js
+- [x] Implement user account management (registration, login, authentication)
 - [ ] Integrate Flask for communication with the LangChain API
 - [ ] Deploy the custom LLM model
-- [ ] Set up MongoDB for storing user information and chat history
+- [x] Set up MongoDB for storing user information and chat history
 - [ ] Implement chat history retrieval functionality
 
 ### Frontend
 
-- [ ] Design and build the user interface using React
-- [ ] Create user account registration and login forms
+- [x] Design and build the user interface using React
+- [x] Create user account registration and login forms
 - [ ] Implement chat interface for user interaction with the LLM chatbot
 - [ ] Add functionality for saving and retrieving chat history
 
 ### Integration
 
-- [ ] Connect the frontend with the backend
+- [x] Connect the frontend with the backend
 - [ ] Test the entire application workflow
 - [ ] Identify and fix any bugs or issues
 
