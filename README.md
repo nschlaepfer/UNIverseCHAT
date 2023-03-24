@@ -56,7 +56,7 @@ This markdown file is designed to track the progress of the UNIverseChat project
 ## Research Ideas NOT in order. (Just different Approaches to checkout)
 
 1. **Training My Own Model on Textbook Data (GPT or LLAMA/Alpaca)**
-    - [ ] Collect and preprocess textbook data
+    - [x] Collect and preprocess textbook data
     - [ ] Train the LLM model using GPT, LLAMA, or Alpaca
     - [ ] Evaluate the model's performance
 
@@ -66,15 +66,15 @@ This markdown file is designed to track the progress of the UNIverseChat project
     - [ ] Re-evaluate the model's performance
 
 3. **Break Down Data into Chunks and Send to API**
-    - [ ] Create a function to divide input data into manageable chunks
-    - [ ] Send each chunk to the LangChain API for processing
-    - [ ] Receive and combine processed chunks from the LangChain API
+    - [x] Create a function to divide input data into manageable chunks
+    - [x] Send each chunk to the LangChain API for processing
+    - [x] Receive and combine processed chunks from the LangChain API
     - [ ] Ensure the combined response is coherent and accurate
 
 4. **Store Data in Database (Vector Database or Document)**
     - [ ] Decide on the database type (vector or document)
-    - [ ] Design the database schema for storing user information and chat history
-    - [ ] Implement the database with MongoDB
+    - [x] Design the database schema for storing user information and chat history
+    - [x] Implement the database with MongoDB
     - [ ] Test database CRUD operations
 
 ## Project Progress
