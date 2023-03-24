@@ -39,6 +39,84 @@ The project uses MongoDB as a document database to store user information and ch
 4. Start chatting!
 5. Save and Retrive Chats
 
+# UNIverseChat Project Progress Tracker
+
+This markdown file is designed to track the progress of the UNIverseChat project, which aims to create a platform for students to interact with an LLM chatbot trained on degree materials, textbooks, and assignments. Users can save and retrieve chats from a database, enabling them to review their learning progress and receive feedback from the chatbot.
+
+## Project Goals and Requirements
+
+- User accounts with saved chat history
+- Custom LLM model deployment on the backend
+- Backend built with MongoDB, Express, Node.js, and Flask
+- Frontend built with React
+- LangChain API integration for LLM model access
+- Docker for deployment and management
+
+## Research Ideas
+
+1. **Training My Own Model on Textbook Data (GPT or LLAMA/Alpaca)**
+    - [ ] Collect and preprocess textbook data
+    - [ ] Train the LLM model using GPT, LLAMA, or Alpaca
+    - [ ] Evaluate the model's performance
+
+2. **Fine-Tune Model**
+    - [ ] Identify areas of improvement for the model
+    - [ ] Fine-tune the model with additional data
+    - [ ] Re-evaluate the model's performance
+
+3. **Break Down Data into Chunks and Send to API**
+    - [ ] Create a function to divide input data into manageable chunks
+    - [ ] Send each chunk to the LangChain API for processing
+    - [ ] Receive and combine processed chunks from the LangChain API
+    - [ ] Ensure the combined response is coherent and accurate
+
+4. **Store Data in Database (Vector Database or Document)**
+    - [ ] Decide on the database type (vector or document)
+    - [ ] Design the database schema for storing user information and chat history
+    - [ ] Implement the database with MongoDB
+    - [ ] Test database CRUD operations
+
+## Project Progress
+
+### Backend
+
+- [ ] Set up Express and Node.js
+- [ ] Implement user account management (registration, login, authentication)
+- [ ] Integrate Flask for communication with the LangChain API
+- [ ] Deploy the custom LLM model
+- [ ] Set up MongoDB for storing user information and chat history
+- [ ] Implement chat history retrieval functionality
+
+### Frontend
+
+- [ ] Design and build the user interface using React
+- [ ] Create user account registration and login forms
+- [ ] Implement chat interface for user interaction with the LLM chatbot
+- [ ] Add functionality for saving and retrieving chat history
+
+### Integration
+
+- [ ] Connect the frontend with the backend
+- [ ] Test the entire application workflow
+- [ ] Identify and fix any bugs or issues
+
+### Deployment
+
+- [ ] Set up Docker containers for application deployment
+- [ ] Deploy the application to a server
+- [ ] Perform stress testing and ensure smoothoperation
+
+### Future Improvements
+
+- [ ] Add support for more degree programs
+- [ ] Improve the LLM model's training data
+- [ ] Explore additional features to enhance user experience and learning
+
+Remember to periodically update the progress tracker by marking off completed tasks and adding new ones as necessary. This will help keep the project on track and ensure that all goals are being met. Additionally, consider sharing this tracker with your team to facilitate collaboration and ensure everyone is on the same page.
+
+Feel free to modify or expand upon the structure provided in this markdown file to suit the specific needs and goals of the UNIverseChat project. Happy coding!
+
+
 
 
 
