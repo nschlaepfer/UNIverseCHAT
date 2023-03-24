@@ -52,7 +52,7 @@ This markdown file is designed to track the progress of the UNIverseChat project
 - LangChain API integration for LLM model access
 - Docker for deployment and management
 
-## Research Ideas
+## Research Ideas NOT in order. (Just different Approaches to checkout)
 
 1. **Training My Own Model on Textbook Data (GPT or LLAMA/Alpaca)**
     - [ ] Collect and preprocess textbook data
