@@ -13,6 +13,7 @@ The project uses MongoDB as a document database to store user information and ch
 - User accounts to save chats.
 - User should have a username and a password.
 - The website will use a custom LLM model deployed on the backend.
+- ChatBod based on chosen degree
 
 ## Technologies
 
