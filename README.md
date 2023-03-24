@@ -113,9 +113,8 @@ This markdown file is designed to track the progress of the UNIverseChat project
 - [ ] Improve the LLM model's training data
 - [ ] Explore additional features to enhance user experience and learning
 
-Remember to periodically update the progress tracker by marking off completed tasks and adding new ones as necessary. This will help keep the project on track and ensure that all goals are being met. Additionally, consider sharing this tracker with your team to facilitate collaboration and ensure everyone is on the same page.
 
-Feel free to modify or expand upon the structure provided in this markdown file to suit the specific needs and goals of the UNIverseChat project. Happy coding!
+Feel free to modify or expand upon the structure provided in this markdown file to suit the specific needs and goals of the UNIverseChat project.
 
 
 
