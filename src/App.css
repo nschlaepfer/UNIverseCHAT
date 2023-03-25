@@ -4,7 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f8f8f8;
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
@@ -95,6 +96,25 @@ h1 {
   background: url("./blackdot.png") repeat;
   background-size: 50px 50px;
   animation: stars 15s linear infinite;
+}
+
+/* App.css or another appropriate CSS file */
+
+/* App.css or another appropriate CSS file */
+
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.3); /* Adjust the opacity value (0.3) as needed */
+  backdrop-filter: blur(3px); /* Adjust the blur value (5px) as needed */
+  -webkit-backdrop-filter: blur(5px); /* For Safari */
+}
+
+.overlay-content {
+  position: relative;
 }
 
 
