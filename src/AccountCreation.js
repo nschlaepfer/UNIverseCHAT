@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './AccountCreation.css';
 import './App.css';
 import { useNavigate } from 'react-router-dom';
-
-
+import Title from './Title';
+import EmojiBook from './EmojiBook';
 
 
 
@@ -78,25 +78,14 @@ function AccountCreation() {
 
 
   return (
+   
 
     <div className="account-creation-container">
-
-
-      <h1 style={{
-        fontFamily: "'Futuristic Font', sans-serif",
-        fontSize: "72px",
-        textAlign: "center"
-
-
-
-      }}>
-        <span style={{ color: "#4d4d4d" }}>UNI</span>
-        <span style={{ color: "#007bff" }}>verse</span>
-        <span style={{ color: "#4d4d4d" }}>Chat</span>
-      </h1>
-
-
-
+     
+        
+  
+  
+      <Title />
 
       <form className="account-creation-form" onSubmit={handleRegistrationSubmit}>
         <h2 className="account-creation-title">Create an Account</h2>
@@ -158,9 +147,10 @@ function AccountCreation() {
         </button>
        
 
-
+       
 
       </form>
+     
     </div>
   );
 }

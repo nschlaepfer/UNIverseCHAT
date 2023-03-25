@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import Title from './Title';
 import './AccountPage.css';
 import './HomePage.css';
+import EmojiBook from './EmojiBook';
+
+
 
 function AccountPage({ onLogout }) {
   const [username, setUsername] = useState('');
@@ -48,6 +51,8 @@ function AccountPage({ onLogout }) {
 
   return (
     <div className="AccountPage">
+    
+        
       <Title />
       <h1>Account Settings</h1>
       <form className="login-form fade-in">
@@ -58,6 +63,7 @@ function AccountPage({ onLogout }) {
           <button type="button" onClick={handleLogout}>Logout</button>
         </div>
       </form>
+   
     </div>
   );
 }

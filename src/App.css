@@ -117,6 +117,24 @@ h1 {
   position: relative;
 }
 
+/* App.css or another appropriate CSS file */
+
+.title-animation {
+  animation: titleZoomIn 1.5s forwards;
+}
+
+@keyframes titleZoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(100);
+    background-color: rgb(255, 255, 255);
+    
+  }
+}
+
+
 
 
 @keyframes stars {

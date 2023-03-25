@@ -41,6 +41,9 @@ function App() {
     setPassword(event.target.value);
   };
 
+
+
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
@@ -60,7 +63,14 @@ function App() {
         // Save the received token and redirect to the dashboard or another page as needed
         localStorage.setItem('token', data.token);
 
-        navigate('/home'); // Navigate to the home page
+        document.querySelector('.App').classList.add('title-animation');
+
+        // Wait for the animation to finish (1s) and then navigate to the home page
+        setTimeout(() => {
+          navigate('/home');
+        }, 300);
+
+       
       } else {
         console.error('Authentication error:', data);
         alert('Invalid credentials');
@@ -70,6 +80,10 @@ function App() {
       alert('Error during authentication');
     }
   };
+
+
+
+
 
 
   return (
