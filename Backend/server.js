@@ -9,6 +9,8 @@ const User = require('./models/users');
 const Prompt = require('./models/ChatMessage');
 const updateUser = require('./updateUser');
 
+const auth = require('./middleware/auth');
+
 
 
 const mongoose = require('mongoose');
@@ -167,7 +169,7 @@ app.put('/updateUsername/:userId', async (req, res) => {
 
   // create a new chat message
   const newMessage = new ChatMessage({
-    user: userId, // user ID from your authentication system
+    user: users.userId, // user ID from your authentication system
     message: 'Hello, World!'
   });
   
