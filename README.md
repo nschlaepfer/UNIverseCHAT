@@ -4,6 +4,9 @@
 
 The goal of this project is to have students login to our website to chat with a LLM chat bot that has been trained on the entire selected degrees materials and text books as well as assignments. The student will be able to save and retrieve chats form a database. This way, they can review their learning progress and get feedback from the chatbot.
 
+# Important Note
+This only includes the frontend and node.js server at the moment. Does not include my python chat bot with this repo. Will update soon.
+
 This is a full-stack MERN project that includes a chatbot, user accounts, and authentication. The project is designed to allow users to create accounts, log in, and start chatting. The chatbot is powered by a custom LLM model deployed on the backend. The project is built using MongoDB, Express, React, Node.js, LangChain, Flask, and Docker.
 
 The project uses MongoDB as a document database to store user information and chat history. Express and Node.js provide a web framework for handling requests and responses on the server side. React creates dynamic user interfaces on the client side using components and state management. LangChain provides an API for accessing the LLM model that generates chatbot responses based on natural language input. Flask serves as a bridge between LangChain and Express by sending and receiving data in JSON format. Docker containers simplify the deployment and management of the application.
